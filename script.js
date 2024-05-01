@@ -119,15 +119,15 @@ document
   .addEventListener("click", function (event) {
     // define the event properties
     var eventProperties = {
-      property1: "value1", // string property
-      property2: 123, // integer property
-      property3: 123.45, // float property
-      property4: new Date(), // date-time property
+      "Property 1": "Value 1", // string property
+      "Property 2": 123, // integer property
+      "Property 3": 45.67, // float property
+      "Property 4": new Date(), // date-time property
     };
 
     try {
       // call the CleverTap function
-      clevertap.event.push("eventName", eventProperties);
+      clevertap.event.push("Event button clicked", eventProperties);
 
       console.log("Event pushed to CleverTap");
     } catch (error) {
