@@ -10,66 +10,110 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="bg-gray-200 flex items-center justify-center min-h-screen">
-    <form
-      id="signupForm"
-      class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full max-w-lg"
+  <body class="bg-gray-200 flex flex-col lg:flex-row h-screen">
+    <div
+      class="lg:flex lg:flex-none md:w-1/2 bg-black text-white p-10 hidden flex-col justify-between items-center relative sm:block"
     >
-      <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
-          Name:
-        </label>
-        <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          type="text"
-          id="name"
-          name="name"
-        />
+      <div class="flex flex-col items-center mb-8">
+        <img src="lock.gif" alt="Logo" class="mb-2" />
+        <p class="text-xl font-bold font-mono text-center">HushHub by Aditya</p>
       </div>
-      <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
-          Email Address:
-        </label>
-        <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          type="email"
-          id="email"
-          name="email"
-        />
+      <div class="text-center mb-4">
+        <p class="text-6xl font-Inter font-bold">
+          Where Confidentiality Meets Connectivity.
+        </p>
+        <p class="text-xl font-Inter font-light text-white mt-4">
+          Discover a secure way to connect with HushHub.
+        </p>
       </div>
-      <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
-          Phone Number:
-        </label>
-        <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          type="tel"
-          id="phone"
-          name="phone"
-        />
-      </div>
-      <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="dob">
-          Date of Birth:
-        </label>
-        <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          type="date"
-          id="dob"
-          name="dob"
-        />
-      </div>
-      <div class="flex items-center justify-between">
-        <input
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          type="submit"
-          value="Login"
-        />
-        <button id="askForPush" class="btn">Ask For Push</button>
-        <button id="profilePush" class="btn">Profile Push</button>
-        <button id="eventButton" class="btn">Raise Event</button>
-      </div>
-    </form>
+      <footer class="text-center font-Inter text-sm">
+        &copy; 2024 Aditya Mishra. All rights reserved.
+      </footer>
+    </div>
+    <div
+      class="flex-grow p-8 lg:p-8 flex flex-col justify-center items-center bg-gradient-to-r from-blue-500 to-white text-black relative"
+    >
+      <form
+        id="signupForm"
+        class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full max-w-lg"
+      >
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+            Name:
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            type="text"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+            Email Address:
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            type="email"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
+            Phone Number:
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            type="tel"
+            id="phone"
+            name="phone"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="dob">
+            Date of Birth:
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            type="date"
+            id="dob"
+            name="dob"
+            required
+          />
+        </div>
+        <div
+          class="flex flex-col md:flex-row md:items-center md:justify-between"
+        >
+          <input
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline my-1 md:my-0"
+            type="submit"
+            value="Login"
+          />
+          <button
+            id="askForPush"
+            class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline my-1 md:my-0"
+          >
+            Ask For Push
+          </button>
+          <button
+            id="profilePush"
+            class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline my-1 md:my-0"
+          >
+            Profile Push
+          </button>
+          <button
+            id="eventButton"
+            class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline my-1 md:my-0"
+          >
+            Raise Event
+          </button>
+        </div>
+      </form>
+    </div>
+
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", function () {
