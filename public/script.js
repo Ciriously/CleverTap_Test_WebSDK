@@ -8,7 +8,12 @@ var clevertap = {
   privacy: [],
 };
 
+// Push account ID to CleverTap account array
+
 clevertap.account.push({ id: "Z44-Z4K-K65Z" });
+
+// Set privacy options for CleverTap
+
 clevertap.privacy.push({ optOut: false });
 clevertap.privacy.push({ useIP: false });
 
@@ -16,10 +21,16 @@ clevertap.privacy.push({ useIP: false });
   var wzrk = document.createElement("script");
   wzrk.type = "text/javascript";
   wzrk.async = true;
+
+  // Set the source of the script to the CleverTap library
+
   wzrk.src =
     ("https:" == document.location.protocol
       ? "https://d2r1yp2w7bby2u.cloudfront.net"
       : "http://static.clevertap.com") + "/js/clevertap.min.js";
+
+  // Insert the script element into the DOM
+
   var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(wzrk, s);
 })();
@@ -29,15 +40,21 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
+    // Get the form values
+
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     var phone = document.getElementById("phone").value;
     var dob = document.getElementById("dob").value;
 
+    // Log the form values
+
     console.log("Name:", name);
     console.log("Email:", email);
     console.log("Phone:", phone);
     console.log("DOB:", dob);
+
+    //Validate the Phone Number
 
     var phoneRegex = /^\+\d+$/;
     if (!phoneRegex.test(phone)) {
@@ -135,7 +152,10 @@ document
     }
   });
 
-// UI Scriptssss
+//  ------------------------------------------------------------------------------------------------
+
+// UI Scripts for the main page
+
 var mainTexts = [
   "Be yourself; everyone else is already taken. ",
   "You only live once, but if you do it right, once is enough. ",
