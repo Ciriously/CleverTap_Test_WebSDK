@@ -134,3 +134,42 @@ document
       console.error("Error pushing event to CleverTap:", error);
     }
   });
+
+// UI Scriptssss
+var mainTexts = [
+  "Be yourself; everyone else is already taken. ",
+  "You only live once, but if you do it right, once is enough. ",
+  "Be the change that you wish to see in the world.",
+  "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe. ",
+  "In three words I can sum up everything I've learned about life: it goes on.",
+];
+
+var subTexts = [
+  "- Oscar Wilde",
+  "- Mae West",
+  "- Mahatma Gandhi",
+  "- Albert Einstein",
+  "- Robert Frost",
+];
+
+var mainTextElement = document.getElementById("mainText");
+var subTextElement = document.getElementById("subText");
+
+// Get the index from localStorage, or default to 0 if it's not set
+var index = parseInt(localStorage.getItem("index")) || 0;
+
+function updateText() {
+  mainTextElement.textContent = mainTexts[index];
+  subTextElement.textContent = subTexts[index];
+
+  // Add the fade-in class to the elements
+  mainTextElement.classList.add("fade-in");
+  subTextElement.classList.add("fade-in");
+
+  // Increment the index and store it in localStorage
+  index = (index + 1) % mainTexts.length;
+  localStorage.setItem("index", index);
+}
+
+// Update the text immediately when the page loads
+updateText();
